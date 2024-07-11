@@ -1,0 +1,33 @@
+[
+    {
+      "text": "Labrador Retrievers are known for their friendly and outgoing nature. They are intelligent dogs and excel in various roles such as hunting companions, service dogs, and family pets.",
+      "section": "General Information",
+      "question": "What are Labrador Retrievers known for?",
+      "course": "llm-course-questions"
+    },
+    {
+      "text": "German Shepherds are highly intelligent and versatile dogs. They are often used as police and military dogs due to their loyalty, courage, and ability to learn and perform complex tasks.",
+      "section": "General Information",
+      "question": "What are German Shepherds known for?",
+      "course": "llm-course-questions"
+    },
+    {
+      "text": "Golden Retrievers are friendly, tolerant, and intelligent dogs. They are popular as family pets and are also widely used in roles such as therapy dogs and search and rescue.",
+      "section": "General Information",
+      "question": "What are Golden Retrievers known for?",
+      "course": "llm-course-questions"
+    },
+    {
+      "text": "Poodles are known for their intelligence, elegance, and hypoallergenic coat. They come in three sizes: standard, miniature, and toy, and are versatile dogs known for their agility and obedience.",
+      "section": "General Information",
+      "question": "What are Poodles known for?",
+      "course": "llm-course-questions"
+    },
+    {
+        "text": "The Prague Shepherds might be the best suited dog for the Czech weather which can be unforgiving",
+        "section": "General Information",
+        "question": "Are the any kind of dog specially suted for Prague",
+        "course": "llm-course-questions"
+      }
+  ]
+  
