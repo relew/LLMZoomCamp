@@ -11,7 +11,7 @@ from sentence_transformers import SentenceTransformer
 ELASTIC_URL = os.getenv("ELASTIC_URL", "http://elasticsearch:9200")
 # ELASTIC_URL = os.getenv("ELASTIC_URL_LOCAL","http://localhost:9200")
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://ollama:11434/v1/")
-#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 es_client = Elasticsearch(ELASTIC_URL)
@@ -96,11 +96,7 @@ def llm(prompt, model_choice):
             'completion_tokens': response.usage.completion_tokens,
             'total_tokens': response.usage.total_tokens
         }
-    elif model_choice.startswith('openai/'):
-        print_log(OPENAI_API_KEY)
-        print_log(model_choice)
-        print_log(prompt)
-        
+    elif model_choice.startswith('openai/'):        
         response = openai_client.chat.completions.create(
             model=model_choice.split('/')[-1],
             messages=[{"role": "user", "content": prompt}]

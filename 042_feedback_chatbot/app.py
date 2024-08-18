@@ -14,14 +14,6 @@ def main():
     print_log("Starting the Course Assistant application")
     st.title("Course Assistant")
 
-    # Session state initialization
-    if 'conversation_id' not in st.session_state:
-        st.session_state.conversation_id = str(uuid.uuid4())
-        print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
-    # if 'conversation_id' not in st.session_state or feedback_already_exists(st.session_state.conversation_id):
-    #     st.session_state.conversation_id = str(uuid.uuid4())
-    #     print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
-
     if 'count' not in st.session_state:
         st.session_state.count = 0
         print_log("Feedback count initialized to 0")
@@ -53,6 +45,11 @@ def main():
     if st.button("Ask"):
         print_log(f"User asked: '{user_input}'")
         with st.spinner('Processing...'):
+
+            # Session state initialization
+            st.session_state.conversation_id = str(uuid.uuid4())
+            print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
+
             print_log(f"Getting answer from assistant using {model_choice} model and {search_type} search")
             start_time = time.time()
             answer_data = get_answer(user_input, course, model_choice, search_type)
