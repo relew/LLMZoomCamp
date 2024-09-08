@@ -35,13 +35,35 @@ This dataset serves as the foundational knowledge base for the model, enabling i
 
 ## Ingestion
 
-## Evaluation
-
-For the code for evaluating the system, you can check the [rag-test.ipynb](rag-test.ipynb) notebook.
-
-## Retrival
-
 ## Rag flow
+
+For the code for basic rag flow, you can check the [notebooks/step1_basic_rag_flow.ipynb](notebooks/step1_basic_rag_flow.ipynb) notebook.
+
+## Retrival Evaluation
+
+For the code for evaluating the system, you can check the [notebooks/step3_retrieval_evaluation.ipynb](notebooks/step3_retrieval_evaluation.ipynb) notebook.
+
+Basic approach - using minsearch without any boosting gave the following metric(num_results=5):
+{'hit_rate': 0.8043902439024391, 'mrr': 0.6790121951219511}
+
+after basic input field param weight hypertuning - results are the followings:
+{'hit_rate': 0.9185365853658537, 'mrr': 0.7592213511420829}
+
+## RAG evaluation
+
+For the code for RAG evaluation, you can check the [notebooks/step4_rag_evaluation.ipynb](notebooks/step4_rag_evaluation.ipynb) notebook.
+
+Cosine Similarity
+
+Answer -> Question -> Answer Cosine Similarity: 0.82
+
+LLM as a Judge
+
+Answer -> Question -> Answer: 149/150(99%) RELEVANT
+
+Question -> Answer: 145/150(97%) RELEVANT
+
+
 
 ## Monitoring
 
