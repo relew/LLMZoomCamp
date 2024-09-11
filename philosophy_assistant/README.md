@@ -34,6 +34,7 @@ This dataset serves as the foundational knowledge base for the model, enabling i
 ## Running it
 
 ## Ingestion
+For the code for creating final dataset, you can check the [notebooks/step0_dataset_exploration.ipynb](notebooks/step0_dataset_exploration.ipynb) notebook.
 
 ## Rag flow
 
@@ -63,7 +64,30 @@ Answer -> Question -> Answer: 149/150(99%) RELEVANT
 
 Question -> Answer: 145/150(97%) RELEVANT
 
+## Interface
 
+Streamlit interface
+
+## Ingestion pipeline
+
+## Containerization
+
+docker-compose yaml contains everything
 
 ## Monitoring
+
+using grafana
+
+## Reproducibility
+
+'''bash
+docker-compose up
+'''
+
+### how to access grafana monitoring
+
+localhost:3000
+
+user:admin 
+pwd:admin --> change pwd
 
